@@ -55,6 +55,6 @@ class bcol:
     UNDERLINE = '\033[4m'
 ################################################################################################################################################
 def dragdrop():
-    filename = re.findall(r'([a-zA-Z]:\/.*?\.[\w:]+)', inp('Drag and drop your file here').replace('\\', '/'))
+    filename = re.findall(r'([a-zA-Z]:\/[^\\\:\*\?\"\>\<\|]*?\.[\w:]+(?![\w\.]))', inp('Drag and drop your file here').replace('\\', '/').replace('//', '/'))
     
     return filename[0]
