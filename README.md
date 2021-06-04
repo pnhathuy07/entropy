@@ -20,6 +20,6 @@ Files are corrupt.<br>
 
 <div align="right">
   
-  Project hosted by **Phan Nhat Huy**
+  Project hosted by [**Phan Nhat Huy**](https://github.com/pnhathuy07)
   
 </div>
