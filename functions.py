@@ -1,7 +1,7 @@
 import sys
 import re
 
-################################################################################################################################################
+
 def join(iterator, seperator):
     it = map(str, iterator)
     seperator = str(seperator)
@@ -9,6 +9,8 @@ def join(iterator, seperator):
     for s in it:
         string += seperator + s
     return string
+
+
 def inp(message, assign='', default='', *options):
     __ass = ''
     __def = ''
@@ -43,6 +45,8 @@ def inp(message, assign='', default='', *options):
             sys.exit()
 
     return result
+
+
 class bcol:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -53,7 +57,8 @@ class bcol:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
-################################################################################################################################################
+
+
 def dragdrop():
     filename = re.findall(r'([a-zA-Z]:\/[^\\\:\*\?\"\>\<\|]*?\.[\w:]+(?![\w\.]))', inp('Drag and drop your file here').replace('\\', '/').replace('//', '/'))
     
