@@ -4,13 +4,13 @@ from functions import inp
 
 
 def encrypt():
-    decode_key = get_decode_key('Please type in the key that you want.'
-                                'You will use this key later to decode the file.')
+    decode_key = get_key('Please type in the key that you want.'
+                         'You will use this key later to decrypt the file.')
     modify(decode_key, 1)
 
 
 def decrypt():
-    decode_dict = get_decode_key('Please input the key to decode the file.')
+    decode_dict = get_key('Please input the key to decrypt the file.')
     modify(decode_dict, -1)
 
 
@@ -22,7 +22,7 @@ key_dict = {' ': 16, 'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H'
             'w': 49, 'x': 50, 'y': 51, 'z': 52}
 
 
-def get_decode_key(message):
+def get_key(message):
     key = ' '.join(re.split(f'[^a-zA-Z]+', inp(message, assign='key')))
     decode_dict = []
     for letter in key:
