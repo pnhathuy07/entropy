@@ -4,7 +4,8 @@ from functions import inp
 
 
 def destroy():
-    percentage = int(inp('What percentage do you want your file to be destroyed? (From 0 to 100)',
+    percentage = int(inp('Warning: Destroying a file is irreversible.\n'
+                         'What percentage do you want your file to be destroyed? (From 0 to 100)',
                          assign='percentage', default='100'))
     filename = f.drag_drop()
 
