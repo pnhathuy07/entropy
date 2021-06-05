@@ -5,7 +5,7 @@ import re
 # --------------------------------------- User Interface --------------------------------------- #
 def inp(message, *options, assign='', default=''):
     """
-    Taken from the repository iocen-form
+    Taken from the repository iocen-form.
     https://github.com/iocen/iocen-form
     """
     __ass = ''
@@ -19,7 +19,7 @@ def inp(message, *options, assign='', default=''):
         __def = f'{ConsoleColors.blue}[Default: {default}] {ConsoleColors.end}\n'
     if not options == ():
         __opt = f"{ConsoleColors.bold}{ConsoleColors.red}" \
-                f"(Type {', '.join([' for '.join(map(str, i)) for i in zip(letters, options)])})" \
+                f"(Type {', '.join([' to '.join(map(str, i)) for i in zip(letters, options)])})" \
                 f"{ConsoleColors.end} "
 
     result = ''
