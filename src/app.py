@@ -3,7 +3,7 @@ from encryption import encrypt, decrypt
 from destroy import destroy
 
 selection = inp('Do you want to encode/decode the file or destroy the file completely?',
-                'Encrypt', 'Decrypt', 'Destroy').upper()
+                'Encrypt', 'Decrypt', 'Destroy')
 
 if selection == 'A':
     encrypt()
