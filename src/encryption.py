@@ -24,10 +24,7 @@ key_dict = {' ': 16, 'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H'
 
 def get_key(message):
     key = ' '.join(re.split(f'[^a-zA-Z]+', inp(message, assign='key')))
-    decode_dict = []
-    for letter in key:
-        decode_dict.append(key_dict[letter])
-    return decode_dict
+    return [key_dict[letter] for letter in key]
 
 
 def modify(decode_dict, direction):
